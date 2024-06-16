@@ -1,0 +1,395 @@
+@font-face {
+  font-family: neu ;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+    font-family: neu ;
+    font-weight: 100;
+      src: url(./NeueHaasDisplayLight.ttf);
+
+  }
+  @font-face {
+    font-family: neu ;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+
+
+
+html,body{
+
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+
+}
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+
+}
+
+#nav-part2{
+
+    display: flex;
+    align-items: center;
+
+    gap: 1vw;
+
+}
+
+#nav-part2 h4{
+
+    padding: 10px 20px;
+    border: 1px solid #8a8989;
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.582);
+    transition: all ease 0.4s;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+#nav-part2 h4::after{
+
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0 ;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+   
+}
+
+#nav-part2 h4:hover::after{
+
+    bottom: 0;
+    border-radius: 0;
+
+}
+
+#nav-part2 h4 a{
+
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.767);
+    z-index: 9;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a{
+
+    color: #fff;
+
+}
+
+#center{
+
+    height: 65vh;
+    width: 100%;
+    /*background-color: orange;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+    
+}
+
+#left h3{
+
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+
+}
+
+#center h1{
+
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+#page1 video{
+    width: 100%;
+
+    border-radius: 20px;
+    margin-top:4vw ;
+    position: relative;
+    
+}
+
+#hero-shape{
+
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+   
+    right: 0;
+    top: 65vh;
+   /*filter:blur(15px)*/
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #fc2f06;
+   /* border-radius: 50%;*/
+   border-top-left-radius:50% ;
+   border-bottom-left-radius: 50%;
+   filter: blur(10px);
+
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background-color: #F5310A;
+    border-radius: 50%;
+  
+   filter: blur(15px);
+   animation-name: anime2;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+}
+#hero-3{
+    background-color: #f5390af5;
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+   
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    from{
+
+        transform: translate(55%,-3%)
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+
+        transform: translate(5%,-5%)
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+}
+
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+
+    font-size: 9vw;
+    
+    display: inline-block;
+}
+#gola{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #ff2c02;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes move {
+    from{
+
+        transform: translate(0);
+    }
+    to{
+        transform: translatex(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+   /* background-color: aliceblue;*/
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+
+}
+#page2-bottom h1{
+
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+
+}
+
+#bottom-part2{
+
+    width: 20%;
+    /*background-color: aqua;*/
+}
+
+#bottom-part2 img{
+
+    width: 100%;
+    border-radius: 15px;
+    
+}
+#bottom-part2 p{
+    font-weight: 200;
+    margin-top: 2vw;
+
+
+}
+
+#page2 #gooey{
+    height: 32vw;
+    width: 32vw;
+    background:linear-gradient(to top right,#f80707,#fa9006) ;
+    border-radius: 50%;
+    top: 50%;
+    left: 25%;
+    position: absolute;
+    filter: blur(20px);
+    animation-name:gooey ;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+#page3{
+   min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+@keyframes gooey{
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+.elem{
+
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid rgb(94, 90, 90);
+   /* background-color:red;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.elem .overlay{
+
+    height: 100%;
+    width: 100%;
+    background-color:#FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+
+}
+
+.elem:hover .overlay{
+
+    top: 0;
+}
+#elem-container{
+
+    
+}
+#fixed-image{
+
+    height: 30vw;
+    width: 24vw;
+    background-color: red;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+}
+
